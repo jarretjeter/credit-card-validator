@@ -30,9 +30,14 @@ function ignoreNonNumber(number) {
 }
 function everyOtherNum(number) {
   let array = number.split("");
-  array = parseInt(array)
-  console.log(array);
-  for (let i = array.length -1; i > 0; i = i - 2) {
-    array[i] = array[i] *2
+  let newArray = []
+
+  array.forEach(function(num) {
+    num = parseInt(num)
+    newArray.push(num)
+  })
+  for (let i = newArray.length -1; i > 0; i = i - 2) {
+    newArray[i] = newArray[i] *2
   }
+  console.log(newArray);
 }
